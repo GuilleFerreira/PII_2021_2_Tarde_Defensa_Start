@@ -32,10 +32,12 @@ namespace Ucu.Poo.Defense.Tests
             Residue Residue1 = new Residue("Residue 1", type1);
             Residue Residue2 = new Residue("Residue 1", type1);
             object Residue3 = new Residue("Residue 1", type1);
-
+            
             Assert.True(Residue1.Equals(Residue2));
             Assert.True(Residue1.Equals(Residue3));
             Assert.True(Residue3.Equals(Residue1));
+
+            //En este caso el error se encuentra en el test, para que sean iguales se tendria que poner: object Residue3 = Residue1
         }
 
         [Test]
